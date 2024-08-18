@@ -1,0 +1,4 @@
+pyyaml==5.4.1
+pycparser==2.20
+unittest2==1.1.0
+multiprocessing-logging==0.3.0

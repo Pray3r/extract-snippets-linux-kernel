@@ -1,0 +1,365 @@
+patterns:
+  lock_mechanism:
+    keywords:
+      - "spin_lock"
+      - "mutex_lock"
+      - "rwlock_init"
+      - "seqlock"
+      - "mutex_unlock"
+
+  device_driver:
+    keywords:
+      - "pci_driver"
+      - "usb_driver"
+      - "platform_driver"
+      - "dev_"
+      - "driver_register"
+      - "driver_unregister"
+
+  memory_management:
+    keywords:
+      - "kmalloc"
+      - "vmalloc"
+      - "memset"
+      - "memcpy"
+      - "get_free_pages"
+      - "free_pages"
+
+  network_subsystem:
+    keywords:
+      - "sock"
+      - "net_device"
+      - "netif_"
+      - "ethernet"
+      - "tcp_"
+      - "udp_"
+      - "skb_"
+
+  interrupt_handler:
+    keywords:
+      - "irqreturn_t"
+      - "request_irq"
+      - "free_irq"
+      - "handle_irq"
+      - "disable_irq"
+      - "enable_irq"
+
+  timer_handler:
+    keywords:
+      - "init_timer"
+      - "mod_timer"
+      - "del_timer"
+      - "hrtimer_"
+      - "setup_timer"
+
+  kernel_module:
+    keywords:
+      - "module_init"
+      - "module_exit"
+      - "MODULE_LICENSE"
+      - "MODULE_AUTHOR"
+      - "MODULE_DESCRIPTION"
+
+  scheduler:
+    keywords:
+      - "schedule"
+      - "sched_init"
+      - "sched_yield"
+      - "wake_up"
+      - "task_struct"
+      - "load_balance"
+
+  syscall:
+    keywords:
+      - "SYSCALL_DEFINE"
+      - "sys_"
+      - "do_syscall"
+      - "asmlinkage"
+
+  memory_barrier:
+    keywords:
+      - "smp_mb"
+      - "smp_rmb"
+      - "smp_wmb"
+      - "smp_store_release"
+      - "smp_load_acquire"
+
+  error_handling:
+    keywords:
+      - "try"
+      - "catch"
+      - "finally"
+      - "error"
+      - "fail"
+      - "goto"
+
+  hotplug_support:
+    keywords:
+      - "register_hotplug"
+      - "unregister_hotplug"
+      - "cpu_hotplug"
+      - "memory_hotplug"
+
+  filesystem:
+    keywords:
+      - "inode"
+      - "dentry"
+      - "super_block"
+      - "vfs_"
+      - "fs_"
+      - "ext4_"
+
+  network_protocol_stack:
+    keywords:
+      - "tcp_"
+      - "udp_"
+      - "ip_"
+      - "skb_"
+      - "net_"
+
+  suspend_resume:
+    keywords:
+      - "suspend"
+      - "resume"
+      - "hibernate"
+      - "pm_"
+      - "sleep"
+
+  power_management:
+    keywords:
+      - "suspend"
+      - "resume"
+      - "power_save"
+      - "pm_"
+      - "device_pm"
+
+  clock_timer:
+    keywords:
+      - "clocksource"
+      - "timer"
+      - "ktime"
+      - "hrtimer"
+      - "timekeeping"
+
+  debugging:
+    keywords:
+      - "printk"
+      - "pr_debug"
+      - "dump_stack"
+      - "BUG_ON"
+      - "WARN_ON"
+
+  security:
+    keywords:
+      - "capable"
+      - "security_"
+      - "selinux_"
+      - "smack_"
+      - "apparmor_"
+
+  device_tree:
+    keywords:
+      - "of_"
+      - "device_tree"
+      - "dt_"
+      - "of_find"
+      - "of_node"
+
+  error_injection:
+    keywords:
+      - "inject"
+      - "fault"
+      - "error_injection"
+
+  memory_sync:
+    keywords:
+      - "synchronize"
+      - "sync"
+      - "flush"
+      - "barrier"
+      - "memory_sync"
+
+  event_notification:
+    keywords:
+      - "notify"
+      - "notifier"
+      - "event"
+      - "signal"
+      - "wake_up"
+
+  buffer_management:
+    keywords:
+      - "buffer"
+      - "ring_buffer"
+      - "page_buffer"
+      - "buf"
+      - "kfifo"
+
+  memory_allocator:
+    keywords:
+      - "kmalloc"
+      - "vmalloc"
+      - "alloc"
+      - "get_free_pages"
+      - "kzalloc"
+
+  io_scheduler:
+    keywords:
+      - "elevator"
+      - "io_schedule"
+      - "blk_"
+      - "rq_"
+      - "bio_"
+
+  kernel_tuning:
+    keywords:
+      - "tune"
+      - "optimize"
+      - "sysctl"
+      - "kstrtoint"
+      - "kstrtobool"
+
+  kernel_logging:
+    keywords:
+      - "printk"
+      - "pr_info"
+      - "pr_err"
+      - "pr_debug"
+      - "log_buf"
+
+  signal_handling:
+    keywords:
+      - "signal"
+      - "sig_"
+      - "kill"
+      - "send_signal"
+      - "receive_signal"
+
+  realtime_scheduler:
+    keywords:
+      - "rt_"
+      - "sched_rt"
+      - "rt_sched"
+      - "sched_fifo"
+      - "sched_rr"
+
+  security_hooks:
+    keywords:
+      - "security_"
+      - "lsm_"
+      - "hook"
+      - "selinux_"
+      - "smack_"
+
+  vfs:
+    keywords:
+      - "vfs_"
+      - "dentry"
+      - "inode"
+      - "super_block"
+      - "mnt_"
+      - "file_"
+
+  module_load_unload:
+    keywords:
+      - "module_init"
+      - "module_exit"
+      - "MODULE_LICENSE"
+      - "MODULE_AUTHOR"
+
+  clocksource:
+    keywords:
+      - "clocksource"
+      - "ktime"
+      - "timekeeping"
+      - "jiffies"
+      - "hrtimer"
+
+  power_event:
+    keywords:
+      - "power_event"
+      - "suspend"
+      - "resume"
+      - "power_save"
+      - "pm_"
+
+  linked_list:
+    keywords:
+      - "list_head"
+      - "list_add"
+      - "list_del"
+      - "list_for_each"
+      - "hlist_"
+
+  workqueue:
+    keywords:
+      - "workqueue"
+      - "queue_work"
+      - "INIT_WORK"
+      - "flush_work"
+      - "schedule_work"
+
+  scheduler_class:
+    keywords:
+      - "sched_class"
+      - "sched_entity"
+      - "task_struct"
+      - "sched"
+      - "load_balance"
+
+  debugfs:
+    keywords:
+      - "debugfs_create"
+      - "debugfs_remove"
+      - "debugfs_"
+      - "file_operations"
+      - "seq_file"
+
+  sync_mechanism:
+    keywords:
+      - "mutex"
+      - "spin_lock"
+      - "semaphore"
+      - "rwlock"
+      - "completion"
+
+  kernel_timer:
+    keywords:
+      - "init_timer"
+      - "mod_timer"
+      - "del_timer"
+      - "add_timer"
+      - "hrtimer"
+
+  scheduler_event:
+    keywords:
+      - "wake_up"
+      - "sleep"
+      - "schedule"
+      - "sched_event"
+      - "cpu_idle"
+
+  lsm:
+    keywords:
+      - "security_"
+      - "selinux_"
+      - "smack_"
+      - "apparmor_"
+      - "lsm_"
+
+  c_extractor:
+    keywords:
+      - "void"
+      - "int"
+      - "char"
+      - "struct"
+      - "typedef"
+      - "enum"
+      - "union"
+
+  inline_assembly_extractor:
+    keywords:
+      - "asm"
+      - "__asm__"
+      - "__volatile__"
+      - "asm volatile"

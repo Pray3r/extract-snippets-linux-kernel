@@ -1,0 +1,267 @@
+# Configuration for each extractor's custom pattern
+extractors:
+  KernelThreadExtractor:
+    description: "Patterns for extracting kernel thread related code."
+    patterns:
+      - r'\b(kthread_create|kthread_run|wake_up_process)\(.*?\);'
+  
+  LockMechanismExtractor:
+    description: "Patterns for extracting kernel lock mechanism code."
+    patterns:
+      - r'\b(spin_lock|mutex_lock|rwlock_init|down_interruptible)\(.*?\);'
+  
+  DeviceDriverExtractor:
+    description: "Patterns for extracting device driver related code."
+    patterns:
+      - r'\b(platform_driver_register|usb_register|pci_register_driver)\(.*?\);'
+  
+  MemoryManagementExtractor:
+    description: "Patterns for extracting memory management related code."
+    patterns:
+      - r'\b(kmalloc|vmalloc|slab|kfree)\(.*?\);'
+  
+  NetworkSubsystemExtractor:
+    description: "Patterns for extracting network subsystem related code."
+    patterns:
+      - r'\b(register_netdev|unregister_netdev|alloc_netdev|netif_napi_add)\(.*?\);'
+  
+  InterruptHandlerExtractor:
+    description: "Patterns for extracting interrupt handler related code."
+    patterns:
+      - r'\b(request_irq|free_irq|irqreturn_t)\(.*?\);'
+  
+  TimerHandlerExtractor:
+    description: "Patterns for extracting timer handler related code."
+    patterns:
+      - r'\b(init_timer|add_timer|mod_timer|del_timer)\(.*?\);'
+  
+  KernelModuleExtractor:
+    description: "Patterns for extracting kernel module related code."
+    patterns:
+      - r'\b(module_init|module_exit|MODULE_LICENSE|MODULE_AUTHOR)\(.*?\);'
+  
+  SchedulerExtractor:
+    description: "Patterns for extracting scheduler related code."
+    patterns:
+      - r'\b(schedule|sched_setscheduler|wake_up_process)\(.*?\);'
+  
+  SyscallExtractor:
+    description: "Patterns for extracting syscall related code."
+    patterns:
+      - r'\b(sys_call_table|SYSCALL_DEFINE)\(.*?\);'
+  
+  MemoryBarrierExtractor:
+    description: "Patterns for extracting memory barrier related code."
+    patterns:
+      - r'\b(mb|rmb|wmb)\(\);'
+  
+  ErrorHandlingExtractor:
+    description: "Patterns for extracting error handling related code."
+    patterns:
+      - r'\b(IS_ERR|ERR_PTR|PTR_ERR)\(.*?\);'
+  
+  HotplugSupportExtractor:
+    description: "Patterns for extracting hotplug support related code."
+    patterns:
+      - r'\b(cpu_hotplug|cpu_down|cpu_up|register_hotcpu_notifier)\(.*?\);'
+  
+  FilesystemExtractor:
+    description: "Patterns for extracting filesystem related code."
+    patterns:
+      - r'\b(register_filesystem|unregister_filesystem|mount|vfs_read|vfs_write)\(.*?\);'
+  
+  NetworkProtocolStackExtractor:
+    description: "Patterns for extracting network protocol stack related code."
+    patterns:
+      - r'\b(ip_rcv|tcp_v4_connect|udp_recvmsg|sock_create)\(.*?\);'
+  
+  SuspendResumeExtractor:
+    description: "Patterns for extracting suspend and resume related code."
+    patterns:
+      - r'\b(pm_suspend|pm_resume|suspend_ops|resume_ops)\(.*?\);'
+  
+  PowerManagementExtractor:
+    description: "Patterns for extracting power management related code."
+    patterns:
+      - r'\b(pm_runtime|pm_suspend|pm_resume)\(.*?\);'
+  
+  ClockTimerExtractor:
+    description: "Patterns for extracting clock and timer related code."
+    patterns:
+      - r'\b(get_time_ns|timekeeping|ktime_get|clocksource_register)\(.*?\);'
+  
+  DebuggingExtractor:
+    description: "Patterns for extracting debugging related code."
+    patterns:
+      - r'\b(printk|pr_debug|dump_stack|trace_printk)\(.*?\);'
+  
+  SecurityExtractor:
+    description: "Patterns for extracting security related code."
+    patterns:
+      - r'\b(security_add_hooks|capable|security_inode_permission|security_task_alloc)\(.*?\);'
+  
+  DeviceTreeExtractor:
+    description: "Patterns for extracting device tree related code."
+    patterns:
+      - r'\b(of_match_table|of_find_node_by_name|of_get_property|of_node_put)\(.*?\);'
+  
+  ErrorInjectionExtractor:
+    description: "Patterns for extracting error injection related code."
+    patterns:
+      - r'\b(register_fault_injection|setup_fault_injection|fault_inject_enable)\(.*?\);'
+  
+  MemorySyncExtractor:
+    description: "Patterns for extracting memory synchronization related code."
+    patterns:
+      - r'\b(sync_memory|flush_cache|smp_wmb|smp_mb|smp_rmb)\(.*?\);'
+  
+  EventNotificationExtractor:
+    description: "Patterns for extracting event notification related code."
+    patterns:
+      - r'\b(signal_pending|wake_up|poll_wait|kill_proc)\(.*?\);'
+  
+  BufferManagementExtractor:
+    description: "Patterns for extracting buffer management related code."
+    patterns:
+      - r'\b(alloc_buffer|free_buffer|buffer_head|buffered_write)\(.*?\);'
+  
+  MemoryAllocatorExtractor:
+    description: "Patterns for extracting memory allocation related code."
+    patterns:
+      - r'\b(kmalloc|kmem_cache_alloc|vmalloc|alloc_pages|get_free_pages)\(.*?\);'
+  
+  IOSchedulerExtractor:
+    description: "Patterns for extracting I/O scheduler related code."
+    patterns:
+      - r'\b(iosched_register|iosched_unregister|elv_register|elv_unregister)\(.*?\);'
+  
+  KernelTuningExtractor:
+    description: "Patterns for extracting kernel tuning related code."
+    patterns:
+      - r'\b(tune_cpu|tune_memory|tune_io|tune_network)\(.*?\);'
+  
+  KernelLoggingExtractor:
+    description: "Patterns for extracting kernel logging related code."
+    patterns:
+      - r'\b(printk|dev_info|dev_warn|dev_err|dev_dbg)\(.*?\);'
+  
+  SignalHandlingExtractor:
+    description: "Patterns for extracting signal handling related code."
+    patterns:
+      - r'\b(signal_pending|kill_proc|send_sig|sigqueue)\(.*?\);'
+  
+  RealtimeSchedulerExtractor:
+    description: "Patterns for extracting realtime scheduler related code."
+    patterns:
+      - r'\b(sched_setscheduler_nocheck|sched_setattr|sched_rr_get_interval)\(.*?\);'
+  
+  SecurityHooksExtractor:
+    description: "Patterns for extracting security hooks related code."
+    patterns:
+      - r'\b(security_inode_alloc|security_file_alloc|security_socket_sendmsg)\(.*?\);'
+  
+  VFSExtractor:
+    description: "Patterns for extracting virtual filesystem (VFS) related code."
+    patterns:
+      - r'\b(vfs_read|vfs_write|vfs_fsync|vfs_unlink|vfs_rename)\(.*?\);'
+  
+  ModuleLoadUnloadExtractor:
+    description: "Patterns for extracting module load/unload related code."
+    patterns:
+      - r'\b(request_module|module_put|try_module_get|module_refcount)\(.*?\);'
+  
+  ClocksourceExtractor:
+    description: "Patterns for extracting clocksource related code."
+    patterns:
+      - r'\b(clocksource_register|clocksource_unregister|clocksource_select|clocksource_suspend)\(.*?\);'
+  
+  PowerEventExtractor:
+    description: "Patterns for extracting power event related code."
+    patterns:
+      - r'\b(pm_event_suspend|pm_event_resume|pm_event_freeze|pm_event_thaw)\(.*?\);'
+  
+  LinkedListExtractor:
+    description: "Patterns for extracting linked list related code."
+    patterns:
+      - r'\b(list_add|list_del|list_empty|list_for_each)\(.*?\);'
+  
+  WorkqueueExtractor:
+    description: "Patterns for extracting workqueue related code."
+    patterns:
+      - r'\b(queue_work|flush_work|cancel_work_sync|schedule_work)\(.*?\);'
+  
+  SchedulerClassExtractor:
+    description: "Patterns for extracting scheduler class related code."
+    patterns:
+      - r'\b(set_scheduler|pick_next_task|task_tick|enqueue_task)\(.*?\);'
+  
+  DebugfsExtractor:
+    description: "Patterns for extracting debugfs related code."
+    patterns:
+      - r'\b(debugfs_create_file|debugfs_remove|debugfs_create_dir)\(.*?\);'
+  
+  SyncMechanismExtractor:
+    description: "Patterns for extracting synchronization mechanisms related code."
+    patterns:
+      - r'\b(sync_page|sync_inodes|sync_filesystem|sync_blockdev)\(.*?\);'
+  
+  KernelTimerExtractor:
+    description: "Patterns for extracting kernel timer related code."
+    patterns:
+      - r'\b(add_timer|mod_timer|del_timer|init_timer)\(.*?\);'
+  
+  SchedulerEventExtractor:
+    description: "Patterns for extracting scheduler event related code."
+    patterns:
+      - r'\b(sched_event_start|sched_event_end|sched_event_init)\(.*?\);'
+  
+  LSMExtractor:
+    description: "Patterns for extracting Linux Security Module (LSM) related code."
+    patterns:
+      - r'\b(security_add_hooks|lsm_hooks|register_security|unregister_security)\(.*?\);'
+  
+  CExtractor:
+    description: "Patterns for extracting C language structures (functions, macros, etc.)."
+    patterns:
+      - r'\b(int|void|char|struct)\s+\w+\(.*?\)\s*{'
+  
+  InlineAssemblyExtractor:
+    description: "Patterns for extracting inline assembly code within C functions."
+    patterns:
+      - r'asm\s*\(.*?\);'
+  
+  ASTExtractor:
+    description: "Patterns for extracting Abstract Syntax Tree (AST) related code."
+    patterns:
+      - r'\b(ast_create|ast_destroy|ast_node|ast_traverse)\(.*?\);'
+  
+  CrossExtractor:
+    description: "Patterns for cross-validation or multi-extractor related structures."
+    patterns:
+      - r'\b(cross_validate|cross_extract|validate_snippets)\(.*?\);'
+  
+  ConditionalCompilationExtractor:
+    description: "Patterns for extracting code within conditional compilation blocks."
+    patterns:
+      - r'#ifdef\s+.*?\n(.*?)#endif'
+  
+  MacroDefinitionExtractor:
+    description: "Patterns for extracting macro definitions."
+    patterns:
+      - r'#define\s+\w+\(.*?\)\s+\\?\s*(.*?)\n'
+  
+  DebugHookExtractor:
+    description: "Patterns for extracting debugging hooks and related code."
+    patterns:
+      - r'\b(printk|pr_debug|tracepoint)\(.*?\);'
+  
+  TimeManagementExtractor:
+    description: "Patterns for extracting time management and clock related code."
+    patterns:
+      - r'\b(timekeeping|clocksource|sched_clock)\(.*?\);'
+  
+  AdvancedMemoryManagementExtractor:
+    description: "Patterns for extracting advanced memory management code."
+    patterns:
+      - r'\b(kmalloc|vmalloc|slab)\(.*?\);'
+

@@ -1,0 +1,26 @@
+sampling_strategies:
+  - name: complexity_based_sampling
+    description: "Sample files based on code complexity."
+    min_complexity: 10
+    enabled: true
+
+  - name: git_history_based_sampling
+    description: "Sample files that have been frequently modified in Git history."
+    change_threshold: 5
+    enabled: true
+
+  - name: combined_sampling
+    description: "Combine complexity-based and Git history-based sampling."
+    strategies:
+      - complexity_based_sampling
+      - git_history_based_sampling
+    enabled: true
+
+  - name: random_sampling
+    description: "Randomly sample a specified percentage of files."
+    percentage: 10
+    enabled: false
+
+default_strategy:
+  name: combined_sampling
+  enabled: true

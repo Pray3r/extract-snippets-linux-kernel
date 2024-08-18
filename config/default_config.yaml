@@ -1,0 +1,40 @@
+project_name: "extract-snippets-linux-kernel"
+
+source_files:
+  directories:
+    - "/path/to/linux-kernel-src"
+  extensions:
+    - ".c"
+    - ".h"
+
+output:
+  snippets_dir: "output/snippets"
+  logs_dir: "output/logs"
+  reports_dir: "output/reports"
+
+parallel_processing:
+  enabled: true
+  max_workers: 8
+
+incremental_processing:
+  enabled: true
+  state_file: "processing_state.txt"
+
+logging:
+  config_file: "config/logging_config.yaml"
+
+sampling:
+  config_file: "config/sampling_strategies.yaml"
+
+custom_patterns:
+  config_file: "config/custom_patterns.yaml"
+
+preprocessing:
+  enabled: true
+  macros:
+    - "CONFIG_*"
+    - "ARCH_*"
+
+batch_processing:
+  enabled: true
+  batch_size: 100
